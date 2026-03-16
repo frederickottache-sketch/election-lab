@@ -1,0 +1,1075 @@
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  1 / 7  — Operating System[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  2 / 7  — Hardware Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  3 / 7  — Network Connectivity[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  4 / 7  — Docker Runtime[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  5 / 7  — Required Packages[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  6 / 7  — Port Availability[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  7 / 7  — System Settings[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Updating package lists...[0m
+[1m  ▶  Installing packages...[0m
+[1m  ▶  Installing Python packages...[0m
+[1m  ▶  Setting kernel tunables...[0m
+[1m  ▶  Tuning Docker daemon...[0m
+[0;32m[OK][0m    Docker daemon configured
+[0;32m[OK][0m    Added ubuntu-2 to docker group
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Pre-flight Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[1;33m[WARN][0m  Timeout waiting for http://localhost:5601/api/status (may still be starting)
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[1;33m[WARN][0m  Timeout waiting for http://localhost:5601/api/status (may still be starting)
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  1 / 7  — Operating System[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  2 / 7  — Hardware Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  3 / 7  — Network Connectivity[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  4 / 7  — Docker Runtime[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  5 / 7  — Required Packages[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  6 / 7  — Port Availability[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  7 / 7  — System Settings[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Updating package lists...[0m
+[1m  ▶  Installing packages...[0m
+[1m  ▶  Installing Python packages...[0m
+[1m  ▶  Setting kernel tunables...[0m
+[1m  ▶  Tuning Docker daemon...[0m
+[0;32m[OK][0m    Docker daemon configured
+[0;32m[OK][0m    Added ubuntu-2 to docker group
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Pre-flight Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  1 / 7  — Operating System[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  2 / 7  — Hardware Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  3 / 7  — Network Connectivity[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  4 / 7  — Docker Runtime[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  5 / 7  — Required Packages[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  6 / 7  — Port Availability[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  7 / 7  — System Settings[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Updating package lists...[0m
+[1m  ▶  Installing packages...[0m
+[1m  ▶  Installing Python packages...[0m
+[1m  ▶  Setting kernel tunables...[0m
+[1m  ▶  Tuning Docker daemon...[0m
+[0;32m[OK][0m    Docker daemon configured
+[0;32m[OK][0m    Added ubuntu-2 to docker group
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Pre-flight Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[0;32m[OK][0m    http://localhost:5601/api/status is responding
+[1m  ▶  Waiting for Kibana to become fully available...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[0;32m[OK][0m    http://localhost:5601/api/status is responding
+[1m  ▶  Waiting for Kibana to become fully available...[0m
+[0;36m[INFO][0m  Kibana status: degraded (attempt 1/30)...
+[0;32m[OK][0m    Kibana is fully available
+[1m  ▶  Configuring Kibana index patterns...[0m
+[0;32m[OK][0m    Kibana index pattern created
+[1m  ▶  Setting up Wazuh IDS rules for election monitoring...[0m
+[1m  ▶  Installing Wazuh agent (lightweight)...[0m
+[1m  ▶  Setting up local election log monitor...[0m
+[0;32m[OK][0m    Election log monitor service started
+[1m  ▶  Collecting SIEM evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  1 / 7  — Operating System[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  2 / 7  — Hardware Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  3 / 7  — Network Connectivity[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  4 / 7  — Docker Runtime[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  5 / 7  — Required Packages[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  6 / 7  — Port Availability[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  7 / 7  — System Settings[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Updating package lists...[0m
+[1m  ▶  Installing packages...[0m
+[1m  ▶  Installing Python packages...[0m
+[1m  ▶  Setting kernel tunables...[0m
+[1m  ▶  Tuning Docker daemon...[0m
+[0;32m[OK][0m    Docker daemon configured
+[0;32m[OK][0m    Added ubuntu-2 to docker group
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Pre-flight Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[1;33m[WARN][0m  Snort config validation — check manually: snort -T -c /etc/snort/snort.conf
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[1;33m[WARN][0m  Snort config validation — check manually: snort -T -c /etc/snort/snort.conf
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[1;33m[WARN][0m  Snort config validation — check manually: snort -T -c /etc/snort/snort.conf
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[1;33m[WARN][0m  Snort config validation — check manually: snort -T -c /etc/snort/snort.conf
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[0;32m[OK][0m    Snort config validated
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[0;32m[OK][0m    Snort config validated
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 4 — Containment, Recovery & Digital Forensics[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Installing forensics tools...[0m
+[0;32m[OK][0m    Forensics tools installed
+[1m  ▶  Creating containment automation toolkit...[0m
+[1m  ▶  Creating recovery playbook...[0m
+[1m  ▶  Setting up memory forensics helper...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 4 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 5 — Legal, Ethical & Public Communication[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Generating breach notification templates...[0m
+[0;32m[OK][0m    Notification and communication templates created
+[1m  ▶  Creating notification compliance checker...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 5 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 6 — Capstone: Attack Simulation & Readiness Kit[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Identity & Access Management (Samba AD + FreeRADIUS)...[0m
+[0;32m[OK][0m    Samba container started
+[0;32m[OK][0m    FreeRADIUS container started
+[1m  ▶  Building attack simulation scenarios...[0m
+[1m  ▶  Running attack simulation (generating SIEM events)...[0m
+[1m  ▶  Compiling Election Cybersecurity Readiness Kit...[0m
+[1m  ▶  Generating readiness kit document...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 6 Complete — Full Lab Deployed[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Evidence Collection — Election Cybersecurity Compliance[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Collecting network evidence...[0m
+[0;32m[OK][0m    Network evidence: network_evidence_20260314_011030.txt
+[1m  ▶  Collecting SIEM evidence...[0m
+[0;32m[OK][0m    SIEM evidence: siem_evidence_20260314_011030.txt
+[1m  ▶  Collecting IDS evidence...[0m
+[0;32m[OK][0m    IDS evidence: ids_evidence_20260314_011030.txt
+[1m  ▶  Collecting threat intelligence evidence...[0m
+[0;32m[OK][0m    Threat intel evidence: threat_intel_evidence_20260314_011030.txt
+[1m  ▶  Collecting forensics evidence...[0m
+[0;32m[OK][0m    Forensics evidence: forensics_evidence_20260314_011030.txt
+[1m  ▶  Collecting IAM evidence...[0m
+[0;32m[OK][0m    IAM evidence: iam_evidence_20260314_011030.txt
+[1m  ▶  Collecting legal & comms evidence...[0m
+[0;32m[OK][0m    Legal evidence: legal_evidence_20260314_011030.txt
+[1m  ▶  Collecting running services snapshot...[0m
+[0;32m[OK][0m    Running services: running_services_20260314_011030.txt
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Evidence Collection Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Election Lab — Service Status[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Full Teardown — Removing All Lab Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    Full teardown complete
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  1 / 7  — Operating System[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  2 / 7  — Hardware Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  3 / 7  — Network Connectivity[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  4 / 7  — Docker Runtime[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  5 / 7  — Required Packages[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  6 / 7  — Port Availability[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  7 / 7  — System Settings[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Updating package lists...[0m
+[1m  ▶  Installing packages...[0m
+[1m  ▶  Installing Python packages...[0m
+[1m  ▶  Setting kernel tunables...[0m
+[1m  ▶  Tuning Docker daemon...[0m
+[0;32m[OK][0m    Docker daemon configured
+[0;32m[OK][0m    Added ubuntu-2 to docker group
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Pre-flight Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Deploying Full Election Cybersecurity Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[0;32m[OK][0m    Created network: lab-election-dmz (172.21.10.0/24)
+[0;32m[OK][0m    Created network: lab-election-int (172.21.20.0/24)
+[0;32m[OK][0m    Created network: lab-election-mgmt (172.21.30.0/24)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[0;32m[OK][0m    Voter database seeded (voters + candidates + precincts + ballots tables)
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[0;32m[OK][0m    http://localhost:5601/api/status is responding
+[1m  ▶  Waiting for Kibana to become fully available...[0m
+[0;36m[INFO][0m  Kibana status: degraded (attempt 1/30)...
+[0;36m[INFO][0m  Kibana status: degraded (attempt 2/30)...
+[0;32m[OK][0m    Kibana is fully available
+[1m  ▶  Configuring Kibana index patterns...[0m
+[0;32m[OK][0m    Kibana index pattern created
+[1m  ▶  Setting up Wazuh IDS rules for election monitoring...[0m
+[1m  ▶  Installing Wazuh agent (lightweight)...[0m
+[1;33m[WARN][0m  Wazuh agent install failed — using local log monitoring fallback
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[0;32m[OK][0m    http://localhost:5601/api/status is responding
+[1m  ▶  Waiting for Kibana to become fully available...[0m
+[0;36m[INFO][0m  Kibana status: degraded (attempt 1/30)...
+[0;36m[INFO][0m  Kibana status: degraded (attempt 2/30)...
+[0;32m[OK][0m    Kibana is fully available
+[1m  ▶  Configuring Kibana index patterns...[0m
+[0;32m[OK][0m    Kibana index pattern created
+[1m  ▶  Setting up Wazuh IDS rules for election monitoring...[0m
+[1m  ▶  Installing Wazuh agent (lightweight)...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 — Network Segmentation & Zero-Trust Firewall[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Creating Docker bridge networks...[0m
+[1;33m[WARN][0m  Network lab-election-dmz already exists — skipping
+[1;33m[WARN][0m  Network lab-election-int already exists — skipping
+[1;33m[WARN][0m  Network lab-election-mgmt already exists — skipping
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[1m  ▶  Deploying ElectionDB (PostgreSQL — Internal segment)...[0m
+[0;32m[OK][0m    ElectionDB deployed: 172.21.20.10:5432
+[1m  ▶  Seeding sample voter registration data...[0m
+[1;33m[WARN][0m  DB seed will retry — DB still starting
+[1m  ▶  Deploying Election Portal (nginx — DMZ)...[0m
+[0;32m[OK][0m    Election portal deployed: http://localhost:8080
+[0;32m[OK][0m    Portal pages: / /register/ /status/ /polling/ /vote/ /results/
+[1m  ▶  Configuring nftables Zero-Trust firewall rules...[0m
+[0;32m[OK][0m    nftables Zero-Trust rules applied (DMZ↔INT blocked, MGMT→INT:5432 allowed, DMZ→MGMT:8443 allowed)
+[1m  ▶  Collecting network evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 1 Exercise[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 — SIEM: Elasticsearch + Kibana + Wazuh[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Elasticsearch 8...[0m
+[0;32m[OK][0m    Elasticsearch container started — waiting for it to be healthy...
+[0;36m[INFO][0m  Waiting for http://localhost:9200...
+[0;32m[OK][0m    http://localhost:9200 is responding
+[1m  ▶  Creating Elasticsearch indices...[0m
+[0;32m[OK][0m    Index election-security-events created
+[0;32m[OK][0m    Index election-db-audit created
+[1m  ▶  Deploying Kibana...[0m
+[0;32m[OK][0m    Kibana container started — waiting...
+[0;36m[INFO][0m  Waiting for http://localhost:5601/api/status...
+[0;32m[OK][0m    http://localhost:5601/api/status is responding
+[1m  ▶  Waiting for Kibana to become fully available...[0m
+[0;36m[INFO][0m  Kibana status: degraded (attempt 1/30)...
+[0;36m[INFO][0m  Kibana status: degraded (attempt 2/30)...
+[0;32m[OK][0m    Kibana is fully available
+[1m  ▶  Configuring Kibana index patterns...[0m
+[0;32m[OK][0m    Kibana index pattern created
+[1m  ▶  Setting up Wazuh IDS rules for election monitoring...[0m
+[1m  ▶  Installing Wazuh agent (lightweight)...[0m
+[1;33m[WARN][0m  Wazuh agent install failed — using local log monitoring fallback
+[1m  ▶  Setting up local election log monitor...[0m
+[0;32m[OK][0m    Election log monitor service started
+[1m  ▶  Setting up local election log monitor...[0m
+[0;32m[OK][0m    Election log monitor service started
+[1m  ▶  Collecting SIEM evidence...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 2 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 — Incident Detection: Snort IDS + Threat Intelligence[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Writing election-specific Snort detection rules...[0m
+[0;32m[OK][0m    Election Snort rules written: /etc/snort/rules/election.rules
+[1m  ▶  Configuring Snort...[0m
+[0;36m[INFO][0m  Snort will monitor interface: br-int
+[0;32m[OK][0m    Snort config validated
+[1m  ▶  Setting up Snort-to-Elasticsearch alert forwarder...[0m
+[0;32m[OK][0m    Snort-to-ES forwarder service started
+[1m  ▶  Setting up MISP-lite local IOC store...[0m
+[0;32m[OK][0m    Election IOC store seeded
+[0;32m[OK][0m    Election IOC store seeded with ? indicators
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 3 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 4 — Containment, Recovery & Digital Forensics[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Installing forensics tools...[0m
+[0;32m[OK][0m    Forensics tools installed
+[1m  ▶  Creating containment automation toolkit...[0m
+[1m  ▶  Creating recovery playbook...[0m
+[1m  ▶  Setting up memory forensics helper...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 4 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 5 — Legal, Ethical & Public Communication[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Generating breach notification templates...[0m
+[0;32m[OK][0m    Notification and communication templates created
+[1m  ▶  Creating notification compliance checker...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 5 Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 6 — Capstone: Attack Simulation & Readiness Kit[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Deploying Identity & Access Management (Samba AD + FreeRADIUS)...[0m
+[0;32m[OK][0m    Samba container started
+[0;32m[OK][0m    FreeRADIUS container started
+[1m  ▶  Building attack simulation scenarios...[0m
+[1m  ▶  Running attack simulation (generating SIEM events)...[0m
+[1m  ▶  Compiling Election Cybersecurity Readiness Kit...[0m
+[1m  ▶  Generating readiness kit document...[0m
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Session 6 Complete — Full Lab Deployed[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Evidence Collection — Election Cybersecurity Compliance[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[1m  ▶  Collecting network evidence...[0m
+[0;32m[OK][0m    Network evidence: network_evidence_20260314_134458.txt
+[1m  ▶  Collecting SIEM evidence...[0m
+[0;32m[OK][0m    SIEM evidence: siem_evidence_20260314_134458.txt
+[1m  ▶  Collecting IDS evidence...[0m
+[0;32m[OK][0m    IDS evidence: ids_evidence_20260314_134458.txt
+[1m  ▶  Collecting threat intelligence evidence...[0m
+[0;32m[OK][0m    Threat intel evidence: threat_intel_evidence_20260314_134458.txt
+[1m  ▶  Collecting forensics evidence...[0m
+[0;32m[OK][0m    Forensics evidence: forensics_evidence_20260314_134458.txt
+[1m  ▶  Collecting IAM evidence...[0m
+[0;32m[OK][0m    IAM evidence: iam_evidence_20260314_134458.txt
+[1m  ▶  Collecting legal & comms evidence...[0m
+[0;32m[OK][0m    Legal evidence: legal_evidence_20260314_134458.txt
+[1m  ▶  Collecting running services snapshot...[0m
+[0;32m[OK][0m    Running services: running_services_20260314_134458.txt
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Evidence Collection Complete[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Election Lab — Service Status[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Stopping Election Lab[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    All election lab containers stopped
+
+[1;34m[1m══════════════════════════════════════════[0m
+[1;34m[1m  Full Teardown — Removing All Lab Resources[0m
+[1;34m[1m══════════════════════════════════════════[0m
+
+[0;32m[OK][0m    Full teardown complete
